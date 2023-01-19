@@ -1,0 +1,112 @@
+format = """
+$username \
+$directory \
+(fg:#87d3ff)\
+$git_branch\
+$golang\
+$haskell\
+$python\
+$java\
+$dart\
+"""
+
+right_format = '\[ $time \] '
+
+[bun]
+format = '\[[$symbol($version)]($style)\]'
+
+[c]
+format = '\[[$symbol($version(-$name))]($style)\]  '
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]  '
+
+[cmd_duration]
+format = '\[[⏱ $duration]($style)\]  '
+
+[dart]
+format = '\[[$symbol($version)]($style)\]  '
+
+[deno]
+format = '\[[$symbol($version)]($style)\]  '
+
+[docker_context]
+format = '\[[$symbol$context]($style)\]  '
+
+[elixir]
+format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]  '
+
+[golang]
+symbol = "🥶 "
+format = '\[[$symbol($version)]($style)\]   '
+
+[haskell]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]   '
+
+[java]
+symbol = "🤮 "
+format = '\[[$symbol($version)]($style)\]  '
+
+[kotlin]
+format = '\[[$symbol($version)]($style)\]  '
+
+[kubernetes]
+format = '\[[$symbol$context( \($namespace\))]($style)\]  '
+
+[memory_usage]
+format = '\[$symbol[$ram( | $swap)]($style)\]  '
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]  '
+
+[ocaml]
+format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]  '
+
+[package]
+format = '\[[$symbol$version]($style)\]  '
+
+[python]
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]  '
+
+[rust]
+format = '\[[$symbol($version)]($style)\]  '
+
+[scala]
+format = '\[[$symbol($version)]($style)\]  '
+
+[sudo]
+format = '\[[as $symbol]\]  '
+
+[swift]
+format = '\[[$symbol($version)]($style)\]  '
+
+[terraform]
+format = '\[[$symbol$workspace]($style)\]  '
+
+[zig]
+format = '\[[$symbol($version)]($style)\]  '
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "#87d3ff"
+format = '[⧖ $time]($style)'
+
+[directory]
+format = '\[[ $path ]($style)\]'
+truncation_length = 2
+truncation_symbol = "…/"
+
+[username]
+show_always = true
+style_user = "#87d3ff"
+format = '\[[$user]($style)\]'
+
+[git_branch]
+symbol = ""
+format = '\[[$branch]($style)\] '
+
+[git_status]
+format = '\[ [$all_status$ahead_behind ]($style)\] '
+
